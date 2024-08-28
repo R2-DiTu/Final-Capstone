@@ -1,0 +1,101 @@
+<div class="container">
+
+    <div>
+        <h4>Add Movie</h4>
+
+        <form class="form-group" [formGroup]="moviesRef" (ngSubmit)="addMovie()">
+            <div class="row">
+                <div class="col-3">
+                    <label>mID</label>
+                </div>
+                <div class="col-3">
+                    <input type="number" class="form-control" formControlName="mid"/>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <label>mName</label>
+                </div>
+                <div class="col-3">
+                    <input type="text" class="form-control" formControlName="mname"/>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <label>Language</label>
+                </div>
+                <div class="col-3">
+                    <input type="text" class="form-control" formControlName="language"/>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <label>Price</label>
+                </div>
+                <div class="col-3">
+                    <input type="number" class="form-control" formControlName="price"/>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <label>QTY</label>
+                </div>
+                <div class="col-3">
+                    <input type="number" class="form-control" formControlName="qty"/>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <label>Date</label>
+                </div>
+                <div class="col-3">
+                    <input type="text" class="form-control" formControlName="date"/>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <input type="submit" value="Store" class="btn btn-success"/>
+                </div>
+                <div class="col-3">
+                    <input type="reset" value="reset" class="btn btn-info"/>
+                </div>
+            </div>
+        </form>
+        <span style="color: red">{{result}}</span>
+    </div>
+    <h2>All Movie Info</h2>
+    <table class="table table-striped">
+        <tr class="table-primary">
+            <th>mid</th>
+            <th>mName</th>
+            <th>language</th>
+            <th>price</th>
+            <th>qty</th>
+            <th>date</th>
+        </tr>
+        <tr *ngFor="let movies of movies">
+            <td>{{movies.mid}}</td>
+            <td>{{movies.mname}}</td>
+            <td>{{movies.language}}</td>
+            <td>{{movies.price}}</td>
+            <td>{{movies.qty}}</td>
+            <td>{{movies.date}}</td>
+        </tr>
+    </table>
+
+</div>
+
+<!--
+	private int mid;
+	private String mname;
+	private String language;
+	private double price;
+	private int qty;
+	private String date;
+	-->

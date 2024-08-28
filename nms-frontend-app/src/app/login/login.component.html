@@ -1,0 +1,17 @@
+<div>
+    <h2>All Login Info</h2>
+    <table>
+        <tr>
+            <th>Pid</th>
+            <th>emailId</th>
+            <th>Password</th>
+            <th>TypeOfUser</th>
+        </tr>
+        <tr *ngFor="let login of login">
+            <td>{{login.pid}}</td>
+            <td>{{login.emailId}}</td>
+            <td>{{login.password}}</td>
+            <td>{{login.typeOfUser}}</td>
+        </tr>
+    </table>
+</div>
