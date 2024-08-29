@@ -20,7 +20,7 @@ import jakarta.annotation.PostConstruct;
 @EntityScan(basePackages = "com.entity")
 @EnableJpaRepositories(basePackages = "com.repository")
 @EnableDiscoveryClient
-public class NmsMovieMicroServiceApplication {
+public class NmsMoviesMicroServiceApplication {
 	
 	@Autowired
 	MoviesService moviesService;
@@ -42,7 +42,7 @@ public class NmsMovieMicroServiceApplication {
 }
 
 	public static void main(String[] args) {
-		SpringApplication.run(NmsMovieMicroServiceApplication.class, args);
+		SpringApplication.run(NmsMoviesMicroServiceApplication.class, args);
 	}
 
 }

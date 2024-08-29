@@ -7,7 +7,7 @@ import { Movies } from './movies';
   providedIn: 'root'
 })
 export class MoviesService {
-  baseUrl:string="http://localhost:9393/movies";
+  baseUrl:string="http://localhost:8383/movies";
 
   constructor(public http:HttpClient) { }
 
