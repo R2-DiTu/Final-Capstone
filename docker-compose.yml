@@ -4,7 +4,7 @@ services:
     image: mysql:8.0
     container_name: mysql_container
     environment:
-      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_PASSWORD=Kamiccolo07#
       - MYSQL_DATABASE=nmsdb
     ports:
       - 3307:3306
@@ -22,10 +22,10 @@ services:
     networks:
       - public 
     restart: always
-  nms-movie-micro-service:
+  nms-movie-ms:
     #image: akashkale/login-micro-service-app:c4
-    build: ./nms-cinemas-backend-app/nms-movies-micro-service/
-    container_name: nms-movies-micro-service_container
+    build: ./nms-cinemas-backend-app/nms-movies-ms/
+    container_name: nms-movies-ms_container
     environment:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
     ports:
@@ -36,7 +36,7 @@ services:
     networks:
       - private
       - public
-    restart: always
+ #   restart: always
   angular-service:
     #image: akashkale/angular-framework-app:c4
     build: ./nms-frontend-app/
